@@ -129,7 +129,7 @@ exactly the judgment a head of QC would want a screen to make.
 
 ---
 
-## 7. How I recorded the AI agent running (2–3 min)
+## 6. How I recorded the AI agent running (2–3 min)
 
 1. Design console → app **Green Lot Cupping & Approval** → **AI Agent Builder → Lot Screening
    Agent → Preview**.
