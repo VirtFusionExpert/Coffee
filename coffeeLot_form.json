@@ -1,0 +1,60 @@
+{
+  "className": "org.joget.apps.form.model.Form",
+  "properties": {
+    "id": "coffeeLot",
+    "name": "Coffee Lot",
+    "tableName": "coffee_lot",
+    "loadBinder": { "className": "org.joget.apps.form.lib.WorkflowFormBinder" },
+    "storeBinder": { "className": "org.joget.apps.form.lib.WorkflowFormBinder" },
+    "description": "Green (unroasted) coffee lot submitted for cupping and purchase approval."
+  },
+  "elements": [
+    {
+      "className": "org.joget.apps.form.model.Section",
+      "properties": { "label": "Lot Details", "id": "sectionLot" },
+      "elements": [
+        {
+          "className": "org.joget.apps.form.model.Column",
+          "properties": { "width": "50%" },
+          "elements": [
+            { "className": "org.joget.apps.form.lib.TextField", "properties": { "id": "lot_ref", "label": "Lot Reference", "value": "", "validator": { "className": "org.joget.apps.form.lib.DefaultValidator", "properties": { "mandatory": "true", "type": "", "message": "" } } } },
+            { "className": "org.joget.apps.form.lib.TextField", "properties": { "id": "producer", "label": "Producer / Cooperative", "value": "", "validator": { "className": "org.joget.apps.form.lib.DefaultValidator", "properties": { "mandatory": "true", "type": "", "message": "" } } } },
+            { "className": "org.joget.apps.form.lib.SelectBox", "properties": { "id": "country", "label": "Country of Origin", "options": [ { "value": "", "label": "" }, { "value": "Ethiopia", "label": "Ethiopia" }, { "value": "Kenya", "label": "Kenya" }, { "value": "Rwanda", "label": "Rwanda" }, { "value": "Colombia", "label": "Colombia" }, { "value": "Brazil", "label": "Brazil" }, { "value": "Guatemala", "label": "Guatemala" }, { "value": "Honduras", "label": "Honduras" }, { "value": "Costa Rica", "label": "Costa Rica" }, { "value": "Panama", "label": "Panama" }, { "value": "Indonesia", "label": "Indonesia" } ] } },
+            { "className": "org.joget.apps.form.lib.TextField", "properties": { "id": "region", "label": "Region / Farm", "value": "" } },
+            { "className": "org.joget.apps.form.lib.TextField", "properties": { "id": "variety", "label": "Variety", "value": "" } }
+          ]
+        },
+        {
+          "className": "org.joget.apps.form.model.Column",
+          "properties": { "width": "50%" },
+          "elements": [
+            { "className": "org.joget.apps.form.lib.SelectBox", "properties": { "id": "process", "label": "Processing Method", "options": [ { "value": "", "label": "" }, { "value": "Washed", "label": "Washed" }, { "value": "Natural", "label": "Natural" }, { "value": "Honey", "label": "Honey" }, { "value": "Anaerobic", "label": "Anaerobic" } ] } },
+            { "className": "org.joget.apps.form.lib.TextField", "properties": { "id": "altitude", "label": "Altitude (masl)", "value": "" } },
+            { "className": "org.joget.apps.form.lib.TextField", "properties": { "id": "harvest_year", "label": "Harvest Year", "value": "" } },
+            { "className": "org.joget.apps.form.lib.TextField", "properties": { "id": "green_kg", "label": "Green Weight Available (kg)", "value": "", "validator": { "className": "org.joget.apps.form.lib.DefaultValidator", "properties": { "mandatory": "false", "type": "numeric", "message": "" } } } },
+            { "className": "org.joget.apps.form.lib.TextField", "properties": { "id": "price_kg", "label": "Price Offered (USD/kg)", "value": "", "validator": { "className": "org.joget.apps.form.lib.DefaultValidator", "properties": { "mandatory": "false", "type": "numeric", "message": "" } } } },
+            { "className": "org.joget.apps.form.lib.DatePicker", "properties": { "id": "sample_date", "label": "Sample Received Date", "format": "yyyy-MM-dd", "dataFormat": "yyyy-MM-dd", "value": "" } }
+          ]
+        }
+      ]
+    },
+    {
+      "className": "org.joget.apps.form.model.Section",
+      "properties": { "label": "Screening Outcome (system-maintained)", "id": "sectionOutcome" },
+      "elements": [
+        {
+          "className": "org.joget.apps.form.model.Column",
+          "properties": { "width": "100%" },
+          "elements": [
+            { "className": "org.joget.apps.form.lib.TextField", "properties": { "id": "status", "label": "Status", "value": "Draft", "readonly": "true" } },
+            { "className": "org.joget.apps.form.lib.TextField", "properties": { "id": "session_count", "label": "Cupping Sessions Recorded", "value": "0", "readonly": "true" } },
+            { "className": "org.joget.apps.form.lib.TextField", "properties": { "id": "avg_score", "label": "Average Cupping Score (/100)", "value": "", "readonly": "true" } },
+            { "className": "org.joget.apps.form.lib.TextField", "properties": { "id": "score_spread", "label": "Cupper Score Spread (max-min)", "value": "", "readonly": "true" } },
+            { "className": "org.joget.apps.form.lib.TextField", "properties": { "id": "ai_decision", "label": "AI Recommendation (BUY / HOLD / REJECT)", "value": "", "readonly": "true" } },
+            { "className": "org.joget.apps.form.lib.TextArea", "properties": { "id": "ai_recommendation", "label": "AI Rationale", "rows": "6", "value": "", "readonly": "true" } }
+          ]
+        }
+      ]
+    }
+  ]
+}

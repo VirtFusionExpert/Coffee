@@ -1,0 +1,71 @@
+{
+  "className": "org.joget.apps.form.model.Form",
+  "properties": {
+    "id": "cuppingSession",
+    "name": "Cupping Session",
+    "tableName": "cupping_session",
+    "loadBinder": { "className": "org.joget.apps.form.lib.WorkflowFormBinder" },
+    "storeBinder": { "className": "org.joget.apps.form.lib.WorkflowFormBinder" },
+    "description": "A single cupper's SCA score sheet for a coffee lot."
+  },
+  "elements": [
+    {
+      "className": "org.joget.apps.form.model.Section",
+      "properties": { "label": "Session", "id": "sectionSession" },
+      "elements": [
+        {
+          "className": "org.joget.apps.form.model.Column",
+          "properties": { "width": "100%" },
+          "elements": [
+            { "className": "org.joget.apps.form.lib.SelectBox", "properties": { "id": "lot_id", "label": "Coffee Lot", "controlField": "", "multiple": "", "optionsBinder": { "className": "org.joget.apps.form.lib.FormOptionsBinder", "properties": { "formDefId": "coffeeLot", "labelColumn": "lot_ref", "groupingColumn": "", "addEmptyOption": "true", "emptyLabel": "" } }, "validator": { "className": "org.joget.apps.form.lib.DefaultValidator", "properties": { "mandatory": "true", "type": "", "message": "" } } } },
+            { "className": "org.joget.apps.form.lib.TextField", "properties": { "id": "cupper", "label": "Cupper Name", "value": "", "validator": { "className": "org.joget.apps.form.lib.DefaultValidator", "properties": { "mandatory": "true", "type": "", "message": "" } } } },
+            { "className": "org.joget.apps.form.lib.DatePicker", "properties": { "id": "cupping_date", "label": "Cupping Date", "format": "yyyy-MM-dd", "dataFormat": "yyyy-MM-dd", "value": "" } }
+          ]
+        }
+      ]
+    },
+    {
+      "className": "org.joget.apps.form.model.Section",
+      "properties": { "label": "SCA Score Sheet (6.00 - 10.00 per attribute)", "id": "sectionScores" },
+      "elements": [
+        {
+          "className": "org.joget.apps.form.model.Column",
+          "properties": { "width": "50%" },
+          "elements": [
+            { "className": "org.joget.apps.form.lib.TextField", "properties": { "id": "s_aroma", "label": "Fragrance / Aroma", "value": "", "validator": { "className": "org.joget.apps.form.lib.DefaultValidator", "properties": { "mandatory": "false", "type": "numeric", "message": "" } } } },
+            { "className": "org.joget.apps.form.lib.TextField", "properties": { "id": "s_flavor", "label": "Flavor", "value": "", "validator": { "className": "org.joget.apps.form.lib.DefaultValidator", "properties": { "mandatory": "false", "type": "numeric", "message": "" } } } },
+            { "className": "org.joget.apps.form.lib.TextField", "properties": { "id": "s_aftertaste", "label": "Aftertaste", "value": "", "validator": { "className": "org.joget.apps.form.lib.DefaultValidator", "properties": { "mandatory": "false", "type": "numeric", "message": "" } } } },
+            { "className": "org.joget.apps.form.lib.TextField", "properties": { "id": "s_acidity", "label": "Acidity", "value": "", "validator": { "className": "org.joget.apps.form.lib.DefaultValidator", "properties": { "mandatory": "false", "type": "numeric", "message": "" } } } },
+            { "className": "org.joget.apps.form.lib.TextField", "properties": { "id": "s_body", "label": "Body", "value": "", "validator": { "className": "org.joget.apps.form.lib.DefaultValidator", "properties": { "mandatory": "false", "type": "numeric", "message": "" } } } }
+          ]
+        },
+        {
+          "className": "org.joget.apps.form.model.Column",
+          "properties": { "width": "50%" },
+          "elements": [
+            { "className": "org.joget.apps.form.lib.TextField", "properties": { "id": "s_balance", "label": "Balance", "value": "", "validator": { "className": "org.joget.apps.form.lib.DefaultValidator", "properties": { "mandatory": "false", "type": "numeric", "message": "" } } } },
+            { "className": "org.joget.apps.form.lib.TextField", "properties": { "id": "s_uniformity", "label": "Uniformity", "value": "", "validator": { "className": "org.joget.apps.form.lib.DefaultValidator", "properties": { "mandatory": "false", "type": "numeric", "message": "" } } } },
+            { "className": "org.joget.apps.form.lib.TextField", "properties": { "id": "s_cleancup", "label": "Clean Cup", "value": "", "validator": { "className": "org.joget.apps.form.lib.DefaultValidator", "properties": { "mandatory": "false", "type": "numeric", "message": "" } } } },
+            { "className": "org.joget.apps.form.lib.TextField", "properties": { "id": "s_sweetness", "label": "Sweetness", "value": "", "validator": { "className": "org.joget.apps.form.lib.DefaultValidator", "properties": { "mandatory": "false", "type": "numeric", "message": "" } } } },
+            { "className": "org.joget.apps.form.lib.TextField", "properties": { "id": "s_overall", "label": "Overall", "value": "", "validator": { "className": "org.joget.apps.form.lib.DefaultValidator", "properties": { "mandatory": "false", "type": "numeric", "message": "" } } } }
+          ]
+        }
+      ]
+    },
+    {
+      "className": "org.joget.apps.form.model.Section",
+      "properties": { "label": "Result", "id": "sectionResult" },
+      "elements": [
+        {
+          "className": "org.joget.apps.form.model.Column",
+          "properties": { "width": "100%" },
+          "elements": [
+            { "className": "org.joget.apps.form.lib.TextField", "properties": { "id": "defects", "label": "Defect Deduction (points)", "value": "0", "validator": { "className": "org.joget.apps.form.lib.DefaultValidator", "properties": { "mandatory": "false", "type": "numeric", "message": "" } } } },
+            { "className": "org.joget.plugin.enterprise.CalculationField", "properties": { "id": "total_score", "label": "Total Cupping Score (/100)", "style": "us", "numOfDecimal": "2", "storeNumeric": "true", "variables": [ { "variableName": "a", "fieldId": "s_aroma", "operation": "sum" }, { "variableName": "b", "fieldId": "s_flavor", "operation": "sum" }, { "variableName": "c", "fieldId": "s_aftertaste", "operation": "sum" }, { "variableName": "d", "fieldId": "s_acidity", "operation": "sum" }, { "variableName": "e", "fieldId": "s_body", "operation": "sum" }, { "variableName": "f", "fieldId": "s_balance", "operation": "sum" }, { "variableName": "g", "fieldId": "s_uniformity", "operation": "sum" }, { "variableName": "h", "fieldId": "s_cleancup", "operation": "sum" }, { "variableName": "i", "fieldId": "s_sweetness", "operation": "sum" }, { "variableName": "j", "fieldId": "s_overall", "operation": "sum" }, { "variableName": "k", "fieldId": "defects", "operation": "sum" } ], "equation": "a + b + c + d + e + f + g + h + i + j - k" } },
+            { "className": "org.joget.apps.form.lib.TextArea", "properties": { "id": "notes", "label": "Tasting Notes", "rows": "4", "value": "" } }
+          ]
+        }
+      ]
+    }
+  ]
+}
