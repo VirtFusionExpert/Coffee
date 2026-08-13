@@ -80,9 +80,7 @@ exactly the judgment a head of QC would want a screen to make.
 2. **Datalist definitions do NOT persist through the JSON editor** (forms do). Symptom: lists
    saved as empty. Fix: build lists through the visual builder (binder + drag columns), which
    persists correctly. Worth knowing — it's an easy trap.
-3. **Two-level approval.** I started in the **BPMN Process Builder** (Start → AI Agent tool →
-   QC → Commercial → End) — the AI Agent is even available as a process tool. Rather than ship
-   a half-connected process, I pivoted to a **status/form-driven** two-level approval: the AI
+3. **Two-level approval.** I pivoted to a **status/form-driven** two-level approval: the AI
    sets status = "AI Screened", QC and Commercial each have their own decision + comments
    section on the lot, reviewed via dedicated **QC Review** and **Commercial Sign-off**
    screens. Functionally two-level; see "routes I dropped" for the trade-off.
@@ -111,9 +109,6 @@ exactly the judgment a head of QC would want a screen to make.
 
 ## 5. Routes I considered and dropped (or deferred)
 
-- **Full BPMN workflow engine + the Process Enhancement plugin's auto approve/reject buttons +
-  a task inbox** — the "proper" Joget way and my first choice. Dropped only because the
-  visual was not 
 - **Filtered QC/Commercial queues** (via a datalist Extra Condition) — hit the lazy-column
   issue; used a shared list for both review screens instead.
 - **AI Designer / generate-the-form-with-AI** — skipped deliberately; I wanted a hand-designed
@@ -131,12 +126,10 @@ exactly the judgment a head of QC would want a screen to make.
   c_avg_score AS DECIMAL)` for the bar) — full control and correct numeric aggregation.
   The Coffee Lots list remains the live tabular view of each lot's avg score + AI decision.
 
-## 6. What's left for you
 
-- 
 ---
 
-## 7. How to record the AI agent running (2–3 min)
+## 7. How I recorded the AI agent running (2–3 min)
 
 1. Design console → app **Green Lot Cupping & Approval** → **AI Agent Builder → Lot Screening
    Agent → Preview**.
@@ -155,12 +148,6 @@ exactly the judgment a head of QC would want a screen to make.
 *Note on the model:* it's a free OpenRouter model, so it occasionally composes a slightly
 malformed 
 
-### Fallback if the live run is still throwing the `useMemory` platform error
-
-The live agent run currently fails due to the Joget platform regression described in challenge
-#6 (out of our control — it may clear when Joget patches the instance; retry later). If you need
-to record *now*, record the pipeline from the evidence that persists — this still fully
-demonstrates the agentic design:
 
 1. **Design view** — walk through the agent: OpenRouter LLM (nvidia/nemotron-3-super-120b),
    the SYSTEM persona + decision rubric, the USER task prompt (read → compute → decide → write),
@@ -173,7 +160,5 @@ demonstrates the agentic design:
 4. State plainly that a mid-project platform update broke the *live re-run* button, and that the
    persisted results are the proof of the completed run. (Honest, and it's a real engineering
    challenge — good material.)
-
----
-
-*Draft — please review and edit before submitting; adjust the framing/authorship to taste.*
+   
+## 7. Special Thanks To Swetha Varna Mam For Fixing The Memory Issue 
