@@ -91,14 +91,21 @@ Then open the **Green Lot Cupping & Approval** app.
 > The screenshots referenced below live in an `images/` folder next to this README.
 
 ### Welcome dashboard
-![Welcome dashboard](images/welcome-dashboard.png)
+![Welcome dashboard]
+<img width="2281" height="1351" alt="image" src="https://github.com/user-attachments/assets/e8f5796e-0cba-4128-9681-d271676cb53d" />
+<img width="2141" height="1351" alt="image" src="https://github.com/user-attachments/assets/d7b89a84-76dd-4ec8-b6e6-611abd3711b4" />
+<img width="2213" height="1171" alt="image" src="https://github.com/user-attachments/assets/7e9471e8-5d20-4b10-b0f5-18bd2604bc7c" />
+
+
 
 - Opens on a greeting banner that shows whoever is logged in, with shortcut buttons straight to the main screens.
 - The "workflow" strip below it lays out the four stages, so anyone new picks up the process at a glance.
 - Two charts read directly from the database: the average cupping score for each lot, and how the lots split across Buy / Hold / Reject. They refresh on their own as lots change.
 
 ### Coffee Lots
-![Coffee Lots list](images/coffee-lots.png)
+![Coffee Lots list]
+<img width="2041" height="816" alt="image" src="https://github.com/user-attachments/assets/e730397b-185f-4ebf-ac02-90d2b80e83fd" />
+
 
 - The master list of every green coffee lot in the system.
 - Each row shows the lot reference, the country, its average cupping score, and the recommendation the AI gave it.
@@ -110,20 +117,26 @@ Then open the **Green Lot Cupping & Approval** app.
 - Under that are the two approval sections that QC and Commercial fill in.
 
 ### Cupping Sessions
-![Cupping Sessions](images/cupping-sessions.png)
+![Cupping Sessions]
+<img width="2041" height="1038" alt="image" src="https://github.com/user-attachments/assets/8c2fe7c0-85b3-43bb-a28f-86188e1f435d" />
+
 
 - Every row here is one cupper's SCA score sheet for a lot.
 - To add one, pick the lot, type in the cupper name and the ten SCA scores; the total out of 100 fills in by itself.
 - More than one person can score the same lot, and the AI later averages them and checks how much they disagreed.
 
 ### QC Review
-![QC Review](images/qc-review.png)
+![QC Review]
+<img width="2020" height="903" alt="image" src="https://github.com/user-attachments/assets/0ef49b36-2d01-4ccf-bf01-52d74b84136a" />
+
 
 - The first of the two approvals, handled by Quality Control.
 - Open a lot, read the AI's screening, then set the QC decision and leave a comment.
 
 ### Commercial Sign-off
-![Commercial Sign-off](images/commercial-signoff.png)
+![Commercial Sign-off]
+<img width="1989" height="885" alt="image" src="https://github.com/user-attachments/assets/bdd55286-9028-4ae9-abd6-dd231c570a6e" />
+
 
 - The final gate. Commercial opens the same lot, sees where QC landed, and makes the buying call with a comment.
 - A lot only clears for purchase once both QC and Commercial have approved it.
