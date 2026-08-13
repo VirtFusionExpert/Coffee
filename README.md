@@ -196,3 +196,7 @@ platform bug. That still demonstrates the full agentic pipeline.
 - `BUILD_LOG.md` — the honest build log (what worked, what didn't, routes dropped).
 - `green_lot_cupping.jwa` — the exported application, ready to import into any Joget DX 9 instance.
 - *(my)* screen recording of the agent.
+
+
+## Special Thanks To Swetha Varna Mam For Fixing The Memory Issue 
+Failed making field 'org.joget.ai.agent.model.AgentTaskMetadata#useMemory' accessible...
