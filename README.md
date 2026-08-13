@@ -193,7 +193,6 @@ platform bug. That still demonstrates the full agentic pipeline.
 
 ## Files in this submission
 - `README.md` — this file.
-- `CHECKLIST.md` — every assessment requirement mapped to status.
 - `BUILD_LOG.md` — the honest build log (what worked, what didn't, routes dropped).
 - `green_lot_cupping.jwa` — the exported application, ready to import into any Joget DX 9 instance.
-- *(your)* screen recording of the agent.
+- *(my)* screen recording of the agent.
