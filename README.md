@@ -91,7 +91,7 @@ Then open the **Green Lot Cupping & Approval** app.
 > The screenshots referenced below live in an `images/` folder next to this README.
 
 ### Welcome dashboard
-![Welcome dashboard]
+[Welcome dashboard]
 <img width="2281" height="1351" alt="image" src="https://github.com/user-attachments/assets/e8f5796e-0cba-4128-9681-d271676cb53d" />
 <img width="2141" height="1351" alt="image" src="https://github.com/user-attachments/assets/d7b89a84-76dd-4ec8-b6e6-611abd3711b4" />
 <img width="2213" height="1171" alt="image" src="https://github.com/user-attachments/assets/7e9471e8-5d20-4b10-b0f5-18bd2604bc7c" />
@@ -103,7 +103,7 @@ Then open the **Green Lot Cupping & Approval** app.
 - Two charts read directly from the database: the average cupping score for each lot, and how the lots split across Buy / Hold / Reject. They refresh on their own as lots change.
 
 ### Coffee Lots
-![Coffee Lots list]
+[Coffee Lots list]
 <img width="2041" height="816" alt="image" src="https://github.com/user-attachments/assets/e730397b-185f-4ebf-ac02-90d2b80e83fd" />
 
 
@@ -111,13 +111,15 @@ Then open the **Green Lot Cupping & Approval** app.
 - Each row shows the lot reference, the country, its average cupping score, and the recommendation the AI gave it.
 - Use **New** to add a lot, or **Edit** to open the full record.
 
-![A lot's AI screening outcome](images/coffee-lot-detail.png)
+[A lot's AI screening outcome]
+<img width="2323" height="1298" alt="image" src="https://github.com/user-attachments/assets/10db89fc-88ba-45db-b48b-5c83400e0d20" />
+
 
 - Inside a lot you get the origin details first, then the **AI Screening Outcome** section: the average score, how far apart the cuppers were, the decision, and the rationale the agent wrote.
 - Under that are the two approval sections that QC and Commercial fill in.
 
 ### Cupping Sessions
-![Cupping Sessions]
+
 <img width="2041" height="1038" alt="image" src="https://github.com/user-attachments/assets/8c2fe7c0-85b3-43bb-a28f-86188e1f435d" />
 
 
@@ -125,16 +127,20 @@ Then open the **Green Lot Cupping & Approval** app.
 - To add one, pick the lot, type in the cupper name and the ten SCA scores; the total out of 100 fills in by itself.
 - More than one person can score the same lot, and the AI later averages them and checks how much they disagreed.
 
+- <img width="2378" height="1219" alt="image" src="https://github.com/user-attachments/assets/a5d4012c-507b-438d-860c-7e78f6f73a89" />
+
+
 ### QC Review
-![QC Review]
+[QC Review]
 <img width="2020" height="903" alt="image" src="https://github.com/user-attachments/assets/0ef49b36-2d01-4ccf-bf01-52d74b84136a" />
 
 
 - The first of the two approvals, handled by Quality Control.
 - Open a lot, read the AI's screening, then set the QC decision and leave a comment.
+<img width="2380" height="1230" alt="image" src="https://github.com/user-attachments/assets/463ee07a-a0df-4cb8-a594-000b79059897" />
 
 ### Commercial Sign-off
-![Commercial Sign-off]
+[Commercial Sign-off]
 <img width="1989" height="885" alt="image" src="https://github.com/user-attachments/assets/bdd55286-9028-4ae9-abd6-dd231c570a6e" />
 
 
