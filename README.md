@@ -191,18 +191,6 @@ platform bug. That still demonstrates the full agentic pipeline.
 
 ---
 
-## Known issue (platform, not the app)
-
-Live agent runs currently fail with
-`Failed making field 'org.joget.ai.agent.model.AgentTaskMetadata#useMemory' accessible …` —
-a bug in Joget's own **`agent-builder-plugin-8.2.2`** (its JSON deserializer can't read that
-field). It reproduces on a brand-new, trivial agent, so it's a platform-side issue, not something in the app's setup.
-**Fix:** update the AI Agent Builder plugin via **System Settings → Manage Plugins** to a
-version newer than 8.2.2, or wait for the hosted instance to be patched. Full detail in
-`BUILD_LOG.md` (challenge #6).
-
----
-
 ## Files in this submission
 - `README.md` — this file.
 - `CHECKLIST.md` — every assessment requirement mapped to status.
